@@ -38,12 +38,9 @@ class DieFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         throwDie()
-        view.setOnClickListener{
-            throwDie()
-        }
     }
 
     fun throwDie() {
-        dieTextView.text = Random.nextInt(dieSides).toString()
+        dieTextView.text = Random.nextInt(1, dieSides).toString()
     }
 }
